@@ -1,0 +1,65 @@
+/* основное игровое окно */
+
+.game-page {
+  width: 712px;
+  margin: 0 auto;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 54px;
+}
+
+.game-page__cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.game-page__header {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  color: #ffffff;
+
+  opacity: 0.85;
+}
+
+.game-page__header p {
+  margin: 0;
+  padding: 0;
+}
+
+.game-page__score--number {
+  padding-left: 10px;
+
+  font-weight: 100;
+  font-family: "Krungthep", "Arial", sans-serif;
+}
+
+.card {
+  position: relative;
+
+  width: 102px;
+  height: 142px;
+  margin: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.card:nth-child(6n) {
+  margin-right: 0;
+}
+
+.card__img {
+  margin: 0;
+  padding: 0;
+
+  &--back {
+    position: absolute;
+    top: 0;
+  }
+}

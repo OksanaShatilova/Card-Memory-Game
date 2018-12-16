@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="StyleSheet" href="css/style.css" type="text/css">
+    <title>Memory game</title>
+  </head>
+  <body>
+    <main class="page-main">
+      <section class="start-page">
+        <img class="page__img page__img--start" src="img/StartGame.png" srcset="img/StartGame@2x.png 2x" alt="стартовое изображение">
+        <p class="start-page__text">Memory Game</p>
+        <button class="page__button--start page-button" type="button">Начать игру</button>
+      </section>
+      <section class="game-page visually-hidden">
+        <header class="game-page__header">
+        <p class="game-page__reset">Начать заново</p>
+        <p class="game-page__score">Очки: <span class="game-page__score--number">0</span></p>
+      </header>
+        <ul class="game-page__cards">
+        </ul>
+      </section>
+      <section class="end-page visually-hidden">
+        <img class="page__img page__img--end" src="img/Group2.png"  srcset="img/Group2@2x.png 2x" alt="финальное изображение">
+        <p class="end-page__total-score">Поздравляем!</p>
+        <button class="page__button--end page-button" type="button">Еще раз</button>
+      </section>
+    </main>
+    <template class="card-template">
+      <li class="card">
+        <img class="card__img card__img--top" src="#" alt="изображение карты">
+        <img class="card__img card__img--back visually-hidden" src="img/back.png" alt="рубашка карты">
+      </li>
+    </template>
+    <script src="js/card.js"></script>
+  </body>
+</html>
