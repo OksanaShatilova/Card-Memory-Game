@@ -17,6 +17,7 @@
   var endPageSection = document.querySelector('.end-page');
   var totalScore = document.querySelector('.end-page__total-score');
   var cardsList = document.querySelector('.game-page__cards');
+  var resetButton = document.querySelector('.page__button--reset');
   var cardsAmount = CARDS_NUMBER;
   var pairOfCards = [];
 
@@ -86,6 +87,10 @@
   // запуск игры
 
   var startNewGame = function () {
+    cardsList.innerHTML = '';
+    cardsAmount = CARDS_NUMBER;
+    scoreEl.innerHTML = 0;
+
     cardsSet = getRandomCardsArray(VALUE, SUIT);
 
     // составление массива с парными элементами
@@ -169,8 +174,6 @@
       gamePageSection.classList.add('visually-hidden');
       endPageSection.classList.remove('visually-hidden');
       totalScore.innerHTML = 'Поздравляем!<br>Ваш итоговый счет: ' + scoreEl.innerHTML;
-      cardsAmount = CARDS_NUMBER;
-      scoreEl.innerHTML = 0;
     }
   };
 
@@ -180,15 +183,19 @@
     startNewGame();
   };
 
+  var onResetButtonClick = function () {
+    startNewGame();
+  };
+
   var onEndButtonClick = function () {
     endPageSection.classList.add('visually-hidden');
     gamePageSection.classList.remove('visually-hidden');
-    cardsList.innerHTML = '';
     startNewGame();
   };
 
   cardsContainer.addEventListener('click', onCardClick);
   startButton.addEventListener('click', onStartButtonClick);
+  resetButton.addEventListener('click', onResetButtonClick);
   endButton.addEventListener('click', onEndButtonClick);
 
 })();
