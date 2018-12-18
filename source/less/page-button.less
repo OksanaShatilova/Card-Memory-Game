@@ -1,20 +1,34 @@
 /* кнопки */
 
-.page-button {
-  min-width: 128px;
+.page__button {
   margin: 0;
-  margin-top: 34px;
-  padding: 10px 20px;
+  padding: 0;
 
-  font-weight: bold;
-  font-size: 16px;
   line-height: 22px;
-  color: #1c7430;
 
-  background-color: #ffffff;
   border: none;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
   opacity: 0.85;
+
+  &--reset {
+    font-size: 14px;
+    color: #ffffff;
+
+    background: transparent;
+  }
+
+  &--end,
+  &--start {
+    min-width: 128px;
+    margin-top: 34px;
+    padding: 10px 20px;
+
+    font-weight: bold;
+    font-size: 16px;
+    color: #1c7430;
+
+    background-color: #ffffff;
+  }
 }
