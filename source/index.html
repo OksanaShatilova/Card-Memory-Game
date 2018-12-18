@@ -7,30 +7,30 @@
     <title>Memory game</title>
   </head>
   <body>
-    <main class="page-main">
+    <main class="page-main" data-tid="App">
       <section class="start-page">
         <img class="page__img page__img--start" src="img/StartGame.png" srcset="img/StartGame@2x.png 2x" alt="стартовое изображение">
         <p class="start-page__text">Memory Game</p>
-        <button class="page__button--start page-button" type="button">Начать игру</button>
+        <button class="page__button--start page__button" type="button" data-tid="NewGame-startGame">Начать игру</button>
       </section>
       <section class="game-page visually-hidden">
         <header class="game-page__header">
-        <p class="game-page__reset">Начать заново</p>
-        <p class="game-page__score">Очки: <span class="game-page__score--number">0</span></p>
+        <button class="page__button--reset page__button" data-tid="Menu-newGame">Начать заново</button>
+        <p class="game-page__score">Очки: <span class="game-page__score--number" data-tid="Menu-scores">0</span></p>
       </header>
-        <ul class="game-page__cards">
+        <ul class="game-page__cards" data-tid="Deck">
         </ul>
       </section>
       <section class="end-page visually-hidden">
         <img class="page__img page__img--end" src="img/Group2.png"  srcset="img/Group2@2x.png 2x" alt="финальное изображение">
         <p class="end-page__total-score">Поздравляем!</p>
-        <button class="page__button--end page-button" type="button">Еще раз</button>
+        <button class="page__button--end page__button" type="button" data-tid="EndGame-retryGame">Еще раз</button>
       </section>
     </main>
     <template class="card-template">
       <li class="card">
-        <img class="card__img card__img--top" src="#" alt="изображение карты">
-        <img class="card__img card__img--back visually-hidden" src="img/back.png" alt="рубашка карты">
+        <img class="card__img card__img--top" src="#" alt="изображение карты" data-tid="Card">
+        <img class="card__img card__img--back visually-hidden" src="img/back.png" alt="рубашка карты" data-tid="Card-flipped">
       </li>
     </template>
     <script src="js/card.js"></script>
